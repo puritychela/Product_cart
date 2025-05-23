@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Desserts Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="products">
+      <h1>Desserts</h1>
+      <div class="cards" id="product-list">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </section>
+
+    <aside class="cart">
+      <h2>Your Cart <span>(<span id="cart-count">0</span>)</span></h2>
+      <div id="cart-items" class="cart-items empty">
+        <img src="images/illustration-empty-cart.svg" alt="Empty cart" />
+        <p>Your added items will appear here</p>
+      </div>
+
+      <div id="cart-summary" class="hidden">
+        <div class="cart-total-row">
+          <p>Order Total</p>
+          <p class="total-amount" id="cart-total">$0.00</p>
+        </div>
+        <div class="carbon-neutral">
+          <img src="images/icon-carbon-neutral.svg" alt="Tree icon" />
+          <span>This is a <strong>carbon-neutral</strong> delivery</span>
+        </div>
+        <button class="confirm-btn">Confirm Order</button>
+      </div>
+    </aside>
+  </main>
+
+ 
+ 
+  <div id="confirmationModal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <img src="images/icon-order-confirmed.svg" alt="Confirmed" class="check-icon" />
+      <h2>Order Confirmed</h2>
+      <p class="subtitle">We hope you enjoy your food!</p>
+    </div>
+
+    <!-- Combined beige background box -->
+    <div class="modal-body" id="confirmationItems">
+      <!-- JS will inject cart items here -->
+    </div>
+
+    <!-- Order total also inside beige box -->
+    <div class="total-box">
+      <div class="total-row">
+        <span>Order Total</span>
+        <span class="modal-total-amount" id="confirmationTotal">$0.00</span>
+      </div>
+    </div>
+
+    <!-- Separated button -->
+    <div class="modal-footer">
+      <button class="start-new-btn" onclick="startNewOrder()">Start New Order</button>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
